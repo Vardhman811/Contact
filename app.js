@@ -2,7 +2,18 @@ const express=require('express')
 const bodyParser = require('body-parser');
 const nodemailer = require("nodemailer");
 const admin = require('firebase-admin');
-const serviceAccount = require('./account.json');
+const serviceAccount = {
+  "type": "service_account",
+  "project_id": "contact-84d2d",
+  "private_key_id": process.env.K1,
+  "private_key":  process.env.K2,
+  "client_email":  process.env.K3,
+  "client_id":  process.env.K4,
+  "auth_uri":  process.env.K5,
+  "token_uri":  process.env.K6,
+  "auth_provider_x509_cert_url":  process.env.K7,
+  "client_x509_cert_url": process.env.K8
+}
 
 var d = new Date();
 var n = d.getTime();
