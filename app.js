@@ -6,7 +6,7 @@ const serviceAccount = {
   "type": "service_account",
   "project_id": "contact-84d2d",
   "private_key_id": process.env.K1,
-  "private_key":  process.env.K2,
+  "private_key":  process.env.K2.replace(/\\n/g, '\n'),
   "client_email":  process.env.K3,
   "client_id":  process.env.K4,
   "auth_uri":  process.env.K5,
