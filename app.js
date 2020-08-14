@@ -56,7 +56,7 @@ app.post('/send',async(req,res)=>{
     const deta = await messageRef.set(responce,{ merge: true });
     var mailOptions = {
         from: process.env.EMAIL,
-        to: 'info@redpositive.in', 
+        to: process.env.EMAIL, //'info@redpositive.in'
         subject: 'Contact Us',
         text: `Mr ${name} - Email ${email} - Phone Number ${phone} has approached us with following message "" ${message} "".`
       };
